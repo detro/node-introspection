@@ -1,0 +1,25 @@
+{
+  "name": "node-introspection",
+  "version": "1.0.0",
+  "description": "Utilities to do introspection of objects: helpful during development",
+  "homepage": "https://github.com/detro/node-introspection",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/detro/node-introspection"
+  },
+  "bugs": {
+    "url": "https://github.com/detro/node-introspection/issues"
+  },
+  "main": "index.js",
+  "keywords": [
+    "introspection",
+    "introspect",
+    "development",
+    "utility",
+    "socket",
+    "request",
+    "response"
+  ],
+  "author": "Ivan De Marino <detronizator@gmail.com>",
+  "license": "Apache 2.0"
+}
