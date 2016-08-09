@@ -1,5 +1,5 @@
 {
-  "name": "node-introspection",
+  "name": "introspection",
   "version": "1.0.0",
   "description": "Utilities to do introspection of objects: helpful during development",
   "homepage": "https://github.com/detro/node-introspection",
