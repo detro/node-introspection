@@ -20,6 +20,10 @@
     "request",
     "response"
   ],
-  "author": "Ivan De Marino <detronizator@gmail.com>",
+  "author": {
+    "name": "Ivan De Marino",
+    "email": "detronizator@gmail.com",
+    "url": "http://ivandemarino.me"
+  },
   "license": "Apache 2.0"
 }
