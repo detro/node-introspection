@@ -36,24 +36,24 @@ exports.objectEvents = function (nodeObject) {
  * Register listeners on an object, for all the given events, and prints
  * a `console.info` when those events fire.
  *
- * @param {Object} object Object to listen on
- * @param {Array} whatToListenOn Array of events to listen to
+ * @param {Object} nodeObject Object to listen on
+ * @param {Array} eventsToListenOn Array of events to listen to
  */
-exports.listenOn = function (object, whatToListenOn) {
+exports.listenOn = function (nodeObject, eventsToListenOn) {
   var eventName, i;
 
   console.info('Adding event listeners for'
-    + ' "[' + whatToListenOn + ']"\n'
+    + ' "[' + eventsToListenOn + ']"\n'
     + ' on'
-    + ' "' + exports.objectHierarchy(object) + '"\n'
+    + ' "' + exports.objectHierarchy(nodeObject) + '"\n'
     + ' that before had listeners for'
-    + ' "[' + exports.objectEvents(object) + ']"');
+    + ' "[' + exports.objectEvents(nodeObject) + ']"');
 
-  for (i = 0; i < whatToListenOn.length; ++i) {
-    eventName = whatToListenOn[i];
-    object.on(eventName, function () {
-      console.info('(' + process.hrtime() + ') ' + object.constructor.name + ' -> ' + eventName);
-    });
+  for (i = 0; i < eventsToListenOn.length; ++i) {
+    eventName = eventsToListenOn[i];
+    nodeObject.on(eventName, function (obj, event) {
+      console.info('(' + process.hrtime() + ') ' + obj.constructor.name + ' -> ' + event);
+    }.bind(null, nodeObject, eventName));
   }
 };
 
