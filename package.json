@@ -11,6 +11,9 @@
     "url": "https://github.com/detro/node-introspection/issues"
   },
   "main": "index.js",
+  "engines": {
+    "node": ">=0.12"
+  },
   "keywords": [
     "introspection",
     "introspect",
